@@ -1,5 +1,5 @@
 # Frontend Mentor - Product preview card component solution
-![Design preview for the Product preview card component coding challenge](/design/desktop-preview.jpg)
+![Design preview for the Order Summary component coding challenge](/design/desktop-preview.jpg)
 
 This is a solution to the [Order summary card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
