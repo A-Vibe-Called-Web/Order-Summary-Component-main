@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --primary-color:hsl(245, 75%, 52%);
+    --secondary-color: hsl(225, 100%, 94%);
+
+    /* Neutral */
+    --blue-n-color100:hsl(225, 100%, 98%);
+    --blue-n-color200:hsl(225, 100%, 96%);
+    --blue-n-color300:hsl(225, 100%, 80%);
+    --blue-n-color500: hsl(224, 23%, 55%);
+    --blue-n-color700: hsl(259, 23%, 55%);
+    --blue-n-color-800: hsl(223, 47%, 23%);
+
+    /* Fonts */
+    --ff-base: 'Red Hat Display', sans-serif;
+
+    --fw-reg: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+  /* Box Shadow */
+  --box-shadow: 0 10px 20px -4px var(--blue-n-color500);
+} 
+
+/* Global Page Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* General Styling */
+
+  body{
+    font-family: var(--ff-base);
+    font-weight: var(--fw-reg);
+    font-size: 1rem;
+    color: var(--blue-n-color500);
+    background: url(/images/pattern-background-desktop.svg) no-repeat top ;
+    background-size: contain;
+    background-color: var(--secondary-color);
+
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+  }
+
+    @media (max-width: 375px) {
+    body{
+        background-image: url(/images/pattern-background-mobile.svg) no-repeat to ;
+        background-size: contain;
+    }
+  }
+
+  /* Utilities */
+
+  .flex-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  /* button */
+
+  button{
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 0;
+    border-radius: 15px;
+    padding: 1rem 1rem;
+    background: var(--primary-color);
+    color: var(--blue-n-color100);
+    font-weight: var(--fw-bold);
+    box-shadow: var(--box-shadow);
+  }
+
+  button:is(:hover, :focus){
+    background-color: var(--blue-n-color700);
+  }
+  
+  /* Summary Styles */
+
+  .summary {
+    --content-padding: 1.5rem;
+    --content-spacing: 2rem;
+
+    background-color: var(--blue-n-color100);
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 450px;
+    box-shadow: var(--box-shadow);
+  }
+
+  
+
+  .summary__content {
+    padding: var(--content-padding);
+    display: grid;
+    gap: var(--content-spacing);
+  }
+
+  .summary__title{
+    font-weight: var(--fw-black);
+    color: var(--blue-n-color-800);
+    text-align: center;
+  }
+
+  .summary__info{
+    text-align: center;
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue-n-color200);
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .flex__group{
+    display: flex;
+  }
+
+  .icon{
+    margin-right: 1.5rem;
+  }
+
+  .paragraph__title{
+    font-weight: var(--fw-black);
+    color: var(--blue-n-color-800);
+  }
+
+  .container > a{
+    color: var(--primary-color);
+    font-weight: var(--fw-bold);
+  }
+
+  .container > a:is(:hover, :focus){
+    color: var(--blue-n-color700);
+    text-decoration: none;
+  }
+
+  .cancel-btn{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .can-btn{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--blue-n-color500);
+    font-weight:  var(--fw-bold);
+  }
+
+  .can-btn:is(:hover, :focus){
+    color: var(--blue-n-color-800);
+    font-weight: var(--fw-black);
+  }
+  @media (min-width: 600px) {
+    .summary__content {
+      padding: 3rem;
+    }
+  }
