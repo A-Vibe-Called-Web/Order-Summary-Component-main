@@ -128,12 +128,12 @@
 
   .summary {
     --content-padding: 1.5rem;
-    --content-spacing: 2rem;
+    --content-spacing: 1.5rem;
 
     background-color: var(--blue-n-color100);
     border-radius: 15px;
     overflow: hidden;
-    max-width: 450px;
+    max-width: 400px;
     box-shadow: var(--box-shadow);
   }
 
